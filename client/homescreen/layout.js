@@ -67,9 +67,13 @@ export const Layout = ( {
 							'woocommerce-admin'
 						) }
 					/>
-					<ActivityPanel />
 					{ isTaskListEnabled && renderTaskList() }
-					{ ! isTaskListEnabled && <StoreManagementLinks /> }
+					{ ! isTaskListEnabled && (
+						<>
+							<ActivityPanel />
+							<StoreManagementLinks />
+						</>
+					) }
 				</Column>
 				<Column shouldStick={ twoColumns }>
 					<StatsOverview />
